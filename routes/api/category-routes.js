@@ -38,7 +38,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   // create a new category
   try {
-    const postCategoryData = await Category.create({ category_name: req.body.category_name,});
+    const postCategoryData = await Category.create(
+      { category_name: req.body.category_name,}
+      );
     res.status(200).json(postCategoryData);
   } catch (err) {
     res.status(400).json(err);
@@ -61,8 +63,9 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
-    const delCategoryData = await Category.destroy({
-      where: {
+    const delCategoryData = await Category.destroy(
+      { 
+        where: {
         id: req.params.id
       }
     });
