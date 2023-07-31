@@ -42,10 +42,10 @@ router.post('/', async (req, res) => {
   /* req.body should look like this...
     {
       "product_name": "Handbag",
-      "category_id": "",
+      "category_id": ,
       "price": 200.00,
       "stock": 5,
-      "tagIds": [1, 4]
+      "tagIds": [1, 4, ]
     }
   */
   Product.create(req.body)
