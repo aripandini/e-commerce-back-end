@@ -7,3 +7,4 @@ This application built the back end for an e-comerce website. Using a working Ex
 
 ## Walkthrough 
 
+Below is a walkthrough video showcasing the functionality of this application. 
